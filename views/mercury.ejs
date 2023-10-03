@@ -1,0 +1,1041 @@
+<!doctype html>
+<html>
+<head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Comfortaa&family=Kanit&family=Nunito&family=Poiret+One&family=Ysabeau+SC&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+
+
+}
+
+  body {
+    font-family:sans-serif;
+    margin:0;
+    color:black;
+    background:white;
+  }
+  #row1, #row2, #row3 {
+    outline:solid 1px var(--alienBlack);
+    display:flex;
+    width:fit-content;
+  } #row2 {
+      position:relative;
+      left:5vw;
+  } #row3 {
+	position:relative;
+	left:10vw;
+  } article {
+    display:flex;
+    flex-direction:column;
+    height:6em;
+  } .keys {
+    background:var(--frenchFuchsia);
+    color:var(--cream);
+
+  }.keys, .fractions, .decimals, .frequencies, .stairIndices {
+    outline:solid 1px var(--alienBlack);
+    width:10vw;
+    display:inline-block;
+    height:2em;
+    text-align:center;
+    overflow-x:hidden;
+  } #controls { 
+    outline:solid 1px var(--alienBlack);
+    width:40vw; 
+  } #updateBox {
+	float:right;
+	width:fit-content;
+	padding:5%;
+	outline:solid 1px var(--alienBlack);
+	background:var(--mauve);
+  color:var(--butter);
+  }
+	input {
+		width:6em;
+	}
+  #top {
+    height:50vh;
+  }
+  #bottom {
+      height:50vh;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+  } #stairwell {
+    outline:solid 2px var(--parisGreen);
+    height:50vh;
+    width:60vw;
+    display:flex;
+  } #staircase {
+    width:15vw;
+    display:grid;
+    grid-template-columns:auto auto auto;
+    overflow-y:scroll;
+    height:50vh;
+  } .fractionStep {
+    background:var(--mauve);
+    color:var(--butter);
+    cursor:pointer;
+  }.fractionStep, .decimalStep, .stepIndices {
+    outline:solid 1px var(--alienBlack);
+    text-align:center;
+  } .decimalStep {
+    text-align:left;
+    text-indent:1em;
+  } fieldset {
+    outline:solid 2px var(--alienBlack);
+  } button {
+    color:var(--cream);
+    background:var(--carolinaBlue);
+  } #skeletonKey {
+    outline:solid 1px var(--carolinaBlue);
+    width:15vw;
+    display:grid;
+    grid-template-columns:auto auto auto;
+    overflow-y:scroll;
+    overflow-x:hidden; 
+  } .skeletonIndices, .skeletonFractions, .skeletonDecimals {
+    outline:solid 1px lightgrey;
+    height:1.5em;
+    text-align:center;
+  } .skeletonDecimals {
+    text-align:left;
+    text-indent:1em;
+  } #rightControls {
+    width:30vw;
+  } #metrix {
+    outline:solid 1px lightgrey;
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    overflow-y:scroll;
+    height:46vh;
+  } #metrix div {
+    outline:solid 1px black;
+  } #gottenScales {
+    outline:solid 1px black;
+    display:grid;
+    grid-template-columns:auto auto auto;
+    overflow-y:scroll;
+    height:18vh;
+  } #gottenScales div {
+    outline:solid 1px black;
+    height:1em;
+  }
+
+
+</style>
+</head>
+<body>
+  <div id="top">
+<section id="row1">
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+</section>
+
+<section id="row2">
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+
+</section>
+
+
+<section id="row3">
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  <article>
+    <div class="keys">&nbsp;</div>
+    <div class="fractions" contenteditable>&nbsp;</div>
+    <div class="decimals">&nbsp;</div>
+    <div class="frequencies">&nbsp;</div>
+    <div class="stairIndices">&nbsp;</div>
+  </article>
+  </section>
+
+</div>
+
+
+<div id="bottom">
+<section id="controls">
+
+	<div id='updateBox'>update interface!</div><br/>
+
+  <fieldset>
+  <button id="init">init</button>
+  root: <input type="number" id="stdPitch" value="216"> Hz
+  </fieldset>
+
+  <fieldset>
+    volume: <input type='range' id='volume' value='.1' step='.01' min='0' max='1'>
+  </fieldset>
+  <fieldset>
+    <button id="renderStaircase">create spiral staircase</button> to the degree of: <input type='number' id='numberOfSteps'>
+  </fieldset>
+  <fieldset>
+    <button id="postScale">post scale</button>
+    <button id="getScale">get scale</button>
+    creator: <input id="creator">
+    name: <input id="name">
+     <input id="scale" type="hidden">
+  </fieldset>
+    <div id="gottenScales">
+      <div>creator</div>
+      <div>name</div>
+      <div>scale</div>
+    </div>
+  </fieldset>
+</section>
+
+<section id="stairwell">
+
+  <div id="staircase"></div>
+
+  <div id="skeletonKey">
+    <div class="skeletonIndices">0</div>
+    <div class="skeletonFractions">1/1</div>
+    <div class="skeletonDecimals">1</div>
+  </div>
+  <section id="rightControls">
+    <button id="mapSkeleton">map</button> skeleton key to interface
+    <button id="toggleMetrix">toggle metrix</button>
+    <div id="metrix"></div>
+  </section>
+</section>
+
+</div>
+
+</body>
+<script>
+// Alcatel hotspot password -> 7nXe7riN
+const keyCodes = [
+
+  {'symb':'Q', 'numb':81},
+  {'symb':'W', 'numb':87},
+  {'symb':'E', 'numb':69},
+  {'symb':'R', 'numb':82},
+  {'symb':'T', 'numb':84},
+  {'symb':'Y', 'numb':89},
+  {'symb':'U', 'numb':85},
+  {'symb':'I', 'numb':73},
+  {'symb':'O', 'numb':79},
+  {'symb':'P', 'numb':80},
+
+  {'symb':'A', 'numb':65},
+  {'symb':'S', 'numb':83},
+  {'symb':'D', 'numb':68},
+  {'symb':'F', 'numb':70},
+  {'symb':'G', 'numb':71},
+  {'symb':'H', 'numb':72},
+  {'symb':'J', 'numb':74},
+  {'symb':'K', 'numb':75},
+  {'symb':'L', 'numb':76},
+ 
+  {'symb':'Z', 'numb':90},
+  {'symb':'X', 'numb':88},
+  {'symb':'C', 'numb':67},
+  {'symb':'V', 'numb':86},
+  {'symb':'B', 'numb':66},
+  {'symb':'N', 'numb':78},
+  {'symb':'M', 'numb':77},
+
+];
+
+const keys = document.getElementsByClassName('keys');
+const fractions = document.getElementsByClassName('fractions');
+const decimals = document.getElementsByClassName('decimals');
+const frequencies = document.getElementsByClassName('frequencies');
+const article = document.getElementsByTagName('article');
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 0; i < 26; i++) {
+    keys[i].innerText = keyCodes[i].symb + ` ${i}`;
+  }
+});
+
+let atx;
+
+document.getElementById('init').onclick = () => atx = new AudioContext();
+const stdPitch = document.getElementById('stdPitch');
+
+let lastPlayedIndex;
+
+class Music {
+  constructor(index, osc, vol) {
+    this.index = index;
+    this.osc = osc;
+    this.vol = vol;
+    this.playing = false;
+  }
+
+  awn() {
+    if (!this.playing) {
+      this.osc = atx.createOscillator();
+      this.vol = atx.createGain();
+
+this.osc.frequency.value = eval(fractions[this.index].textContent) * stdPitch.value;
+  
+      this.vol.gain.value = document.getElementById('volume').value;
+
+      this.osc.connect(this.vol).connect(atx.destination);
+      this.osc.start(0);
+      this.playing = true;
+      lastPlayedIndex = this.index;
+
+	article[this.index].style.background = 'lightgrey';
+	
+    }
+  }
+
+  auf() {
+    this.osc.stop(0);
+    this.playing = false;
+	article[this.index].style.background = 'white';
+
+  }
+}
+
+
+let notes = [
+  new Music(0),
+  new Music(1),
+  new Music(2),
+  new Music(3),
+  new Music(4),
+  new Music(5),
+  new Music(6),
+  new Music(7),
+  new Music(8),
+  new Music(9),
+  new Music(10),
+  new Music(11),
+  new Music(12),
+  new Music(13),
+  new Music(14),
+  new Music(15),
+  new Music(16),
+  new Music(17),
+  new Music(18),
+  new Music(19),
+  new Music(20),
+  new Music(21),
+  new Music(22),
+  new Music(23),
+  new Music(24),
+  new Music(25),
+];
+
+
+
+
+
+document.addEventListener('keydown', e => {
+  switch (e.keyCode) {
+    case keyCodes[0].numb:
+      notes[0].awn();
+    break;
+    case keyCodes[1].numb:
+      notes[1].awn();
+    break;
+    case keyCodes[2].numb:
+      notes[2].awn();
+    break;
+    case keyCodes[3].numb:
+      notes[3].awn();
+    break;
+    case keyCodes[4].numb:
+      notes[4].awn();
+    break;
+    case keyCodes[5].numb:
+      notes[5].awn();
+    break;
+    case keyCodes[6].numb:
+      notes[6].awn();
+    break;
+    case keyCodes[7].numb:
+      notes[7].awn();
+    break;
+    case keyCodes[8].numb:
+      notes[8].awn();
+    break;
+    case keyCodes[9].numb:
+      notes[9].awn();
+    break;
+    case keyCodes[10].numb:
+      notes[10].awn();
+    break;
+    case keyCodes[11].numb:
+      notes[11].awn();
+    break;
+    case keyCodes[12].numb:
+      notes[12].awn();
+    break;
+    case keyCodes[13].numb:
+      notes[13].awn();
+    break;
+    case keyCodes[14].numb:
+      notes[14].awn();
+    break;
+    case keyCodes[15].numb:
+      notes[15].awn();
+    break;
+    case keyCodes[16].numb:
+      notes[16].awn();
+    break;
+    case keyCodes[17].numb:
+      notes[17].awn();
+    break;
+    case keyCodes[18].numb:
+      notes[18].awn();
+    break;
+    case keyCodes[19].numb:
+      notes[19].awn();
+    break;
+	case keyCodes[20].numb:
+      notes[20].awn();
+    break;
+    case keyCodes[21].numb:
+      notes[21].awn();
+    break;
+    case keyCodes[22].numb:
+      notes[22].awn();
+    break;
+    case keyCodes[23].numb:
+      notes[23].awn();
+    break;
+    case keyCodes[24].numb:
+      notes[24].awn();
+    break;
+    case keyCodes[25].numb:
+      notes[25].awn();
+    break;
+    case 38:
+      skeleton[lastPlayedIndex] = skeleton[lastPlayedIndex] + 1;
+      fractions[lastPlayedIndex].innerText = fractionStep[skeleton[lastPlayedIndex]].textContent;
+      decimals[lastPlayedIndex].innerText = eval(fractionStep[skeleton[lastPlayedIndex]].textContent);
+      frequencies[lastPlayedIndex].innerText = eval(fractionStep[skeleton[lastPlayedIndex]].textContent) * stdPitch.value;
+      stairIndices[lastPlayedIndex].innerText = skeleton[lastPlayedIndex];
+      e.preventDefault();
+    break;
+    case 40:
+      skeleton[lastPlayedIndex] = skeleton[lastPlayedIndex] - 1;
+      fractions[lastPlayedIndex].innerText = fractionStep[skeleton[lastPlayedIndex]].textContent;
+      decimals[lastPlayedIndex].innerText = eval(fractionStep[skeleton[lastPlayedIndex]].textContent);
+      frequencies[lastPlayedIndex].innerText = eval(fractionStep[skeleton[lastPlayedIndex]].textContent) * stdPitch.value;
+      stairIndices[lastPlayedIndex].innerText = skeleton[lastPlayedIndex];
+      e.preventDefault();
+    break;
+
+  }
+});
+
+
+document.addEventListener('keyup', e => {
+  switch (e.keyCode) {
+    case keyCodes[0].numb:
+      notes[0].auf();
+    break;
+    case keyCodes[1].numb:
+      notes[1].auf();
+    break;
+    case keyCodes[2].numb:
+      notes[2].auf();
+    break;
+    case keyCodes[3].numb:
+      notes[3].auf();
+    break;
+    case keyCodes[4].numb:
+      notes[4].auf();
+    break;
+    case keyCodes[5].numb:
+      notes[5].auf();
+    break;
+    case keyCodes[6].numb:
+      notes[6].auf();
+    break;
+    case keyCodes[7].numb:
+      notes[7].auf();
+    break;
+    case keyCodes[8].numb:
+      notes[8].auf();
+    break;
+    case keyCodes[9].numb:
+      notes[9].auf();
+    break;
+    case keyCodes[10].numb:
+      notes[10].auf();
+    break;
+    case keyCodes[11].numb:
+      notes[11].auf();
+    break;
+    case keyCodes[12].numb:
+      notes[12].auf();
+    break;
+    case keyCodes[13].numb:
+      notes[13].auf();
+    break;
+    case keyCodes[14].numb:
+      notes[14].auf();
+    break;
+    case keyCodes[15].numb:
+      notes[15].auf();
+    break;
+    case keyCodes[16].numb:
+      notes[16].auf();
+    break;
+    case keyCodes[17].numb:
+      notes[17].auf();
+    break;
+    case keyCodes[18].numb:
+      notes[18].auf();
+    break;
+    case keyCodes[19].numb:
+      notes[19].auf();
+    break;
+	case keyCodes[20].numb:
+      notes[20].auf();
+    break;
+    case keyCodes[21].numb:
+      notes[21].auf();
+    break;
+    case keyCodes[22].numb:
+      notes[22].auf();
+    break;
+    case keyCodes[23].numb:
+      notes[23].auf();
+    break;
+    case keyCodes[24].numb:
+      notes[24].auf();
+    break;
+    case keyCodes[25].numb:
+      notes[25].auf();
+    break;
+
+
+  }
+});
+
+
+
+
+const updateBox = document.getElementById('updateBox');
+
+	updateBox.addEventListener('mouseover', () => {
+		for (let i = 0; i < 26; i++) {
+			if (eval(fractions[i].textContent)) {
+				decimals[i].innerText = eval(fractions[i].textContent); 
+				frequencies[i].innerText = eval(fractions[i].textContent) * stdPitch.value; 
+			}
+		}
+	});
+
+	stdPitch.addEventListener('change', () => {
+		for (let i = 0; i < 26; i++) {
+			if (eval(fractions[i].textContent)) {
+				frequencies[i].innerText = eval(fractions[i].textContent) * stdPitch.value; 
+			}
+		}
+
+		
+
+
+
+	});
+
+
+
+const stairwell = document.getElementById('stairwell');
+const staircase = document.getElementById('staircase');
+const numberOfSteps = document.getElementById('numberOfSteps');
+
+
+const stepIndices = document.getElementsByClassName('stepIndices');
+const fractionStep = document.getElementsByClassName('fractionStep');
+const decimalStep = document.getElementsByClassName('decimalStep');
+
+//flight of stairs
+
+let ray = [], numerator = 1, denominator = 1;
+
+	document.getElementById('renderStaircase').addEventListener('click', () => {
+
+
+    ray = [{'fraction':'1/1', 'decimal':1}];
+    numerator = 1;
+    denominator = 1;
+
+    for (let i = 0; i < numberOfSteps.value; i++) {
+      numerator = 1;
+      while (numerator < denominator) {
+        ray.push({'fraction':`${numerator}/${denominator}`, 'decimal':numerator/denominator});
+        numerator++;
+      }
+      denominator++;
+    }
+
+
+    ray.sort(function(a, b) {return a.decimal - b.decimal})
+
+
+    numerator = 1;
+
+    for (let i = 0; i < numberOfSteps.value; i++) {
+      denominator = 1;
+      while (denominator < numerator) {
+        ray.push({'fraction':`${numerator}/${denominator}`, 'decimal':numerator/denominator});
+        denominator++;
+      }
+      numerator++;
+    }
+
+
+
+    ray.sort(function(a, b) {return a.decimal - b.decimal})
+
+
+function removeDuplicates() {
+let duplicates = true;
+
+while (duplicates == true) {
+  duplicates = false;
+  for (let i = 1; i < ray.length; i++) {
+    if (ray[i].decimal == ray[i-1].decimal) {
+      console.log(i + ' ' + ray[i].fraction);
+      ray.splice(i, 1);
+      duplicates = true;
+    }
+
+  }
+}
+  return ray;
+}
+removeDuplicates(ray)
+
+
+while (staircase.hasChildNodes()) {
+  staircase.removeChild(staircase.firstChild);
+}
+
+
+    for (let i = 0; i < ray.length; i++) {
+
+      let elementI = document.createElement('div');
+      elementI.setAttribute('class', 'stepIndices')
+      elementI.append(i);
+      staircase.append(elementI);
+
+      let elementF = document.createElement('div');
+      elementF.setAttribute('class', 'fractionStep')
+      elementF.append(ray[i].fraction);
+      staircase.append(elementF);
+
+      let elementD = document.createElement('div');
+      elementD.setAttribute('class', 'decimalStep')
+      elementD.append(ray[i].decimal.toFixed(6).replace(/0+$/, ''));
+      staircase.append(elementD);
+    }
+
+});
+
+
+
+
+
+const stairIndices = document.getElementsByClassName('stairIndices');
+
+
+
+const skeletonKey = document.getElementById('skeletonKey');
+const skeletonIndices = document.getElementsByClassName('skeletonIndices');
+const skeletonFractions = document.getElementsByClassName('skeletonFractions');
+const skeletonDecimals = document.getElementsByClassName('skeletonDecimals');
+
+let masterKey = ['1/1'], boneCount = 0, boneAdded = false;
+
+staircase.addEventListener('click', e => {
+
+  for (let i = 0; i < masterKey.length; i++) {
+
+    if (eval(e.target.textContent) < eval(masterKey[i])) {
+      masterKey.splice(i, 0, e.target.textContent);
+      boneAdded = true;
+      break;
+    }
+  }
+
+  if (boneAdded === false) {
+    masterKey.push(e.target.textContent);
+  }
+
+  boneAdded = false;
+
+    let indicesNode = document.createElement('div');
+    indicesNode.setAttribute('class', 'skeletonIndices');
+    skeletonKey.append(indicesNode);
+
+    let fractionNode = document.createElement('div');
+    fractionNode.setAttribute('class', 'skeletonFractions');
+    skeletonKey.append(fractionNode);
+
+    let decimalNode = document.createElement('div');
+    decimalNode.setAttribute('class', 'skeletonDecimals');
+    skeletonKey.append(decimalNode);
+
+    for (let i = 0; i < masterKey.length; i++) {
+      skeletonIndices[i].innerText = i;
+      skeletonFractions[i].innerText = masterKey[i];
+      skeletonDecimals[i].innerText = eval(masterKey[i]).toFixed(6).replace(/0+$/, '');
+    }
+
+
+
+});
+
+
+skeletonKey.addEventListener('dblclick', e => {
+
+
+  let index = eval(e.target.textContent);
+
+  skeletonIndices[index].remove();
+  skeletonFractions[index].remove();
+  skeletonDecimals[index].remove();
+
+  masterKey.splice(index, 1);
+});
+
+
+document.getElementById('mapSkeleton').addEventListener('click', () => {
+  for (let i = 0; i < skeletonFractions.length; i++) {
+    fractions[i].innerText = skeletonFractions[i].textContent;
+    decimals[i].innerText = eval(skeletonFractions[i].textContent);
+    frequencies[i].innerText = eval(skeletonFractions[i].textContent) * stdPitch.value;
+    stairIndices[i].innerText = skeletonIndices[i].textContent;
+  }
+});
+
+const metrix = document.getElementById('metrix');
+const toggleMetrix = document.getElementById('toggleMetrix');
+
+let metrixOn = false;
+
+toggleMetrix.addEventListener('click', () => {
+  if (metrixOn === false) {
+    document.addEventListener('keydown', activateMetrix);
+    metrixOn = true;
+  } else {
+    document.removeEventListener('keydown', activateMetrix);
+    metrixOn = false;
+  }
+});
+
+
+let playedArchive = ['1/1'], numerator0, denominator0, numerator1, denominator1, archiveIndex = 1;
+
+
+
+function activateMetrix() {
+  playedArchive.push(fractions[lastPlayedIndex].textContent);
+
+  numerator0 = playedArchive[archiveIndex-1].split('/')[0];
+
+  denominator0 = playedArchive[archiveIndex-1].split('/')[1];
+
+  numerator1 = playedArchive[archiveIndex].split('/')[0];
+
+  denominator1 = playedArchive[archiveIndex].split('/')[1];
+
+
+let newNumerator = numerator1 * denominator0;
+let newDenominator = numerator0 * denominator1;
+
+
+
+  function reduce(numerator,denominator){
+  var gcd = function gcd(a,b){
+    return b ? gcd(b, a%b) : a;
+  };
+  gcd = gcd(numerator,denominator);
+  return [numerator/gcd, denominator/gcd];
+}
+
+let reducedProduct = reduce(newNumerator, newDenominator).join('/');
+
+let firstNote = document.createElement('div');
+firstNote.append(`${numerator0}/${denominator0}`);
+metrix.append(firstNote);
+
+let lastNote = document.createElement('div');
+lastNote.append(`${numerator1}/${denominator1}`);
+metrix.append(lastNote);
+
+let diff = document.createElement('div');
+diff.append(`${reducedProduct}`);
+metrix.append(diff);
+
+let diffDec = document.createElement('div');
+diffDec.append(`${eval(reducedProduct)}`);
+metrix.append(diffDec);
+
+metrix.scrollTop = metrix.scrollHeight;
+
+  archiveIndex++;
+};
+
+
+
+const postScale = document.getElementById('postScale');
+const getScale = document.getElementById('getScale');
+const gottenScales = document.getElementById('gottenScales');
+
+const creator = document.getElementById('creator');
+const name = document.getElementById('name');
+const scale = document.getElementById('scale');
+
+
+
+
+postScale.addEventListener('click', postingScale);
+
+async function postingScale() {
+
+let ray = [];
+
+  for (let i = 0; i < skeletonFractions.length; i++) {
+    ray.push(skeletonFractions[i].textContent);
+}
+
+  await fetch('/posting', {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-type":"application/json"
+    }, 
+    body: JSON.stringify({creator: creator.value, name: name.value, scale: ray})
+    
+  }).then(res => console.log(res))
+
+
+}
+
+
+
+
+
+
+getScale.addEventListener('click', gettingScale);
+
+async function gettingScale() {
+  await fetch('/getting', {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "Content-type":"application/json"
+    }
+  }).then(res => res.json())
+  .then(data => {
+    
+    console.log(data.data.length);
+
+
+  for (let i = 0; i < data.data.length; i++) {
+
+    let creatorElement = document.createElement('div');
+    let creatorText = document.createTextNode(`${data.data[i].creator}`);
+    creatorElement.append(creatorText);
+    gottenScales.append(creatorElement);
+
+
+    let nameElement = document.createElement('div');
+    let nameText = document.createTextNode(`${data.data[i].name}`);
+    nameElement.append(nameText);
+    gottenScales.append(nameElement);
+
+    let notesElement = document.createElement('div');
+    let notesText = document.createTextNode(`${data.data[i].notes}`);
+    notesElement.append(notesText);
+    gottenScales.append(notesElement);
+  }
+
+  });
+  
+};
+
+
+
+
+</script>
+</html>

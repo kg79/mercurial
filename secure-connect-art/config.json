@@ -1,0 +1,16 @@
+{
+  "host": "8bb72e3e-46db-40b7-aa4a-c98dee8117e4-us-east1.db.astra.datastax.com",
+  "port": 29080,
+  "cql_port": 29042,
+  "keyspace": "music",
+  "localDC": "us-east1",
+  "caCertLocation": "./ca.crt",
+  "keyLocation": "./key",
+  "certLocation": "./cert",
+  "keyStoreLocation": "./identity.jks",
+  "keyStorePassword": "7KwNd69b28gPxHqjO",
+  "trustStoreLocation": "./trustStore.jks",
+  "trustStorePassword": "pWy1czb7ng4aA2V6l",
+  "csvLocation": "./data",
+  "pfxCertPassword": "7f9cVT6GONsR0lo1k"
+}
